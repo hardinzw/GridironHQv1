@@ -1,44 +1,54 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 
 namespace GridironHQv1.Entities
 {
     public class Team
     {
-        [Description("Abbreviation of the team (e.g. SD, PHI, NE, IND, etc.)")]
-        [DataMember(Name = "Key", Order = 1)]
-        public string Key { get; set; }
-
-        [Description("The auto-generated unique ID of the Team.")]
-        [DataMember(Name = "TeamID", Order = 2)]
+        public decimal? AverageDraftPosition { get; set; }
+        public decimal? AverageDraftPosition2QB { get; set; }
+        public decimal? AverageDraftPositionDynasty { get; set; }
+        public decimal? AverageDraftPositionPPR { get; set; }
+        public int? ByeWeek { get; set; }
+        public string? City { get; set; }
+        public string? Conference { get; set; }
+        public string? DefensiveCoordinator { get; set; }
+        public string? DefensiveScheme { get; set; }
+        public string? Division { get; set; }
+        public string? DraftKingsName { get; set; }
+        public int? DraftKingsPlayerID { get; set; }
+        public string? FanDuelName { get; set; }
+        public int? FanDuelPlayerID { get; set; }
+        public string? FantasyDraftName { get; set; }
+        public int? FantasyDraftPlayerID { get; set; }
+        public string? FullName { get; set; }
+        public int? GlobalTeamID { get; set; }
+        public string? HeadCoach { get; set; }
+        public string? Key { get; set; }
+        public string? Name { get; set; }
+        public string? OffensiveCoordinator { get; set; }
+        public string? OffensiveScheme { get; set; }
+        public int? PlayerID { get; set; }
+        public string? PrimaryColor { get; set; }
+        public string? QuaternaryColor { get; set; }
+        public string? SecondaryColor { get; set; }
+        public string? SpecialTeamsCoach { get; set; }
+        //public Stadium? StadiumDetails { get; set; }
+        public int? StadiumID { get; set; }
+        [Required]
         public int TeamID { get; set; }
-
-        [Description("The auto-generated unique ID of the Team, that avoids collisions with PlayerIDs.  This is useful when combining players and fantasy defenses to create fantasy teams.")]
-        [DataMember(Name = "PlayerID", Order = 3)]
-        public int PlayerID { get; set; }
-
-        [Description("The city/location of the team (e.g. San Diego, Philadelphia, New England, Indianapolis, etc.)")]
-        [DataMember(Name = "City", Order = 4)]
-        public string City { get; set; }
-
-        [Description("The mascot of the team (e.g. Chargers, Eagles, Patriots, Colts, etc.)")]
-        [DataMember(Name = "Name", Order = 5)]
-        public string Name { get; set; }
-
-        [Description("The conference of the team (e.g. AFC or NFC)")]
-        [DataMember(Name = "Conference", Order = 6)]
-        public string Conference { get; set; }
-
-        [Description("The division of the team (e.g. East, North, South, West)")]
-        [DataMember(Name = "Division", Order = 7)]
-        public string Division { get; set; }
-
-        [Description("The full name of the team (e.g. New England Patriots)")]
-        [DataMember(Name = "FullName", Order = 8)]
-        public string FullName { get; set; }
-
-        [Description("The current head coach of the team")]
-        [DataMember(Name = "HeadCoach", Order = 13)]
-        public string HeadCoach { get; set; }
+        public string? TertiaryColor { get; set; }
+        public int? UpcomingDraftKingsSalary { get; set; }
+        public int? UpcomingFanDuelSalary { get; set; }
+        public string? UpcomingOpponent { get; set; }
+        public int? UpcomingOpponentPositionRank { get; set; }
+        public int? UpcomingOpponentRank { get; set; }
+        public int? UpcomingSalary { get; set; }
+        public int? UpcomingYahooSalary { get; set; }
+        public string? WikipediaLogoUrl { get; set; }
+        public string? WikipediaWordMarkUrl { get; set; }
+        public string? YahooName { get; set; }
+        public int? YahooPlayerID { get; set; }
     }
 }
