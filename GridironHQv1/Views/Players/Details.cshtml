@@ -6,15 +6,26 @@
 
 <h1>Details</h1>
 
+<form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" name="searchString" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find Player</button>
+</form>
+
 <div>
     <h4>Player</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Active)
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Active)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Number)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Age)
@@ -41,12 +52,6 @@
             @Html.DisplayFor(model => model.College)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CurrentStatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CurrentStatus)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CurrentTeam)
         </dt>
         <dd class = "col-sm-10">
@@ -59,82 +64,10 @@
             @Html.DisplayFor(model => model.DeclaredInactive)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DepthDisplayOrder)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DepthDisplayOrder)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DepthOrder)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DepthOrder)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DepthPosition)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DepthPosition)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DepthPositionCategory)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DepthPositionCategory)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DraftKingsName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DraftKingsName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DraftKingsPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DraftKingsPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Experience)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Experience)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.ExperienceString)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ExperienceString)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FanDuelName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FanDuelName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FanDuelPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FanDuelPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FantasyAlarmPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FantasyAlarmPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FantasyDraftName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FantasyDraftName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FantasyDraftPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FantasyDraftPlayerID)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.FantasyPosition)
@@ -149,94 +82,16 @@
             @Html.DisplayFor(model => model.FantasyPositionDepthOrder)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GlobalTeamID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GlobalTeamID)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Height)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Height)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HeightFeet)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HeightFeet)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HeightInches)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HeightInches)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InjuryBodyPart)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InjuryBodyPart)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InjuryNotes)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InjuryNotes)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InjuryPractice)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InjuryPractice)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InjuryPracticeDescription)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InjuryPracticeDescription)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InjuryStartDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InjuryStartDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.InjuryStatus)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.InjuryStatus)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IsUndraftedFreeAgent)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.IsUndraftedFreeAgent)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Number)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Number)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.PhotoUrl)
@@ -257,42 +112,6 @@
             @Html.DisplayFor(model => model.PositionCategory)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RotoWirePlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RotoWirePlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.RotoworldPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.RotoworldPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ShortName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ShortName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SportRadarPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SportRadarPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SportsDirectPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SportsDirectPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.StatsPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.StatsPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Status)
         </dt>
         <dd class = "col-sm-10">
@@ -305,112 +124,10 @@
             @Html.DisplayFor(model => model.Team)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TeamID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TeamID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingDraftKingsSalary)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingDraftKingsSalary)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingFanDuelSalary)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingFanDuelSalary)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingGameOpponent)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingGameOpponent)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingGameWeek)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingGameWeek)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingOpponentPositionRank)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingOpponentPositionRank)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingOpponentRank)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingOpponentRank)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingSalary)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingSalary)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpcomingYahooSalary)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpcomingYahooSalary)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UsaTodayHeadshotNoBackgroundUpdated)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsaTodayHeadshotNoBackgroundUpdated)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UsaTodayHeadshotNoBackgroundUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsaTodayHeadshotNoBackgroundUrl)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UsaTodayHeadshotUpdated)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsaTodayHeadshotUpdated)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UsaTodayHeadshotUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsaTodayHeadshotUrl)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UsaTodayPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UsaTodayPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Weight)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Weight)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.XmlTeamPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.XmlTeamPlayerID)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.YahooName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.YahooName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.YahooPlayerID)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.YahooPlayerID)
         </dd>
     </dl>
 </div>

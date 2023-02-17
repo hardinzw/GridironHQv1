@@ -10,20 +10,21 @@ namespace GridironHQv1.Data
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
-            _fantasyDataService = new FantasyDataService();
+            //_fantasyDataService = new FantasyDataService();
         }
-        public DbSet<PlayerSeason> PlayerSeasons { get; set; }
+        //public DbSet<PlayerSeason> PlayerSeasons { get; set; }
         //public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
         //public DbSet<News> News { get; set; }
         //public DbSet<Stadium> Stadiums { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) => optionsBuilder.UseSqlite(@"Data Source=.\\Data\\fantasyData.db");
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<PlayerSeason>().HasData(_fantasyDataService.GetPlayerSeasonStats());
+            //modelBuilder.Entity<PlayerSeason>().HasData(_fantasyDataService.GetPlayerSeasonStats());
             //modelBuilder.Entity<Team>().HasData(_fantasyDataService.GetAllTeams());
             //modelBuilder.Entity<News>().HasData(_fantasyDataService.GetNews());
-            modelBuilder.Entity<Player>().HasData(_fantasyDataService.GetPlayers());
+            //modelBuilder.Entity<Player>().HasData(_fantasyDataService.GetPlayers());
             //modelBuilder.Entity<Stadium>().HasData(_fantasyDataService.GetStadiums());
         }
     }

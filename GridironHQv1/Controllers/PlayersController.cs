@@ -20,9 +20,19 @@ namespace GridironHQv1.Controllers
         }
 
         // GET: Players
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-              return View(await _context.Players.ToListAsync());
+            //return View(await _context.Players.Where(a => a.Active == true).Where(pc => pc.PositionCategory == "OFF").ToListAsync());
+            ViewData["CurrentFilter"] = searchString;
+            var players = from p in _context.Players
+                          select p;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                players = players.Where(p =>p.Name == searchString);
+            }
+
+            return View(players);
         }
 
         // GET: Players/Details/5
@@ -41,6 +51,14 @@ namespace GridironHQv1.Controllers
             }
 
             return View(player);
+        }
+
+        //POST:
+        public async Task<IActionResult> OnPostFormAsync()
+        {
+            var searchString = Request.Form["searchString"];
+
+            return View(await _context.Players.Where(n => n.Name.Contains(searchString)).ToListAsync());
         }
 
         // GET: Players/Create

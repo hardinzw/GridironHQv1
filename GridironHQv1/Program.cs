@@ -1,5 +1,4 @@
 using GridironHQv1.Data;
-using GridironHQv1.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
@@ -30,7 +29,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapControllerRoute(
-    name: "team",
-    pattern: "{controller=Team}/{action=Index}");
+    name: "Index",
+    pattern: "{controller=Players}/{action=Index}");
 
 app.Run();
