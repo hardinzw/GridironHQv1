@@ -18,21 +18,34 @@ namespace GridironHQv1.Services
         //    _client = new NFLv3StatsClient(_configuration["APIKeys:FantasyDataKey"]);
         //}
 
-        //public List<Player> GetPlayers()
-        //{
-        //    return _client.GetPlayers();
-        //}
+        public List<PlayerSeason> GetPlayerSeasonStats()
+        {
+            NFLv3StatsClient client = new NFLv3StatsClient("");
+            return client.GetPlayerSeasonStats("2022REG");
+        }
 
         public List<Team> GetAllTeams()
         {
-            NFLv3StatsClient client = new NFLv3StatsClient("f5c1a5ae83ef431cbc47e1845a0cc4c4");
+            NFLv3StatsClient client = new NFLv3StatsClient("");
             return client.GetAllTeams();
         }
 
-        public List<Stadium> GetStadiums()
+        public List<Player> GetPlayers()
         {
-            NFLv3StatsClient client = new NFLv3StatsClient("f5c1a5ae83ef431cbc47e1845a0cc4c4");
-            return client.GetStadiums();
+            NFLv3StatsClient client = new NFLv3StatsClient("");
+            return client.GetPlayers();
         }
+
+        //public List<Stadium> GetStadiums()
+        //{
+        //    NFLv3StatsClient client = new NFLv3StatsClient("");
+        //    return client.GetStadiums();
+        //}
+
+        //public List<News> GetNews()
+        //{
+        //    NFLv3StatsClient client = new NFLv3StatsClient("");
+        //    return client.GetNews();
+        //}
     }
 }

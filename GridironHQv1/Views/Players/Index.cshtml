@@ -1,0 +1,431 @@
+﻿@model IEnumerable<GridironHQv1.Entities.Player>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AverageDraftPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.College)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentTeam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DeclaredInactive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepthDisplayOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepthOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepthPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepthPositionCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DraftKingsName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DraftKingsPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Experience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExperienceString)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FanDuelName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FanDuelPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FantasyAlarmPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FantasyDraftName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FantasyDraftPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FantasyPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FantasyPositionDepthOrder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GlobalTeamID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeightFeet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeightInches)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjuryBodyPart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjuryNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjuryPractice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjuryPracticeDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjuryStartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InjuryStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsUndraftedFreeAgent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhotoUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PositionCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RotoWirePlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RotoworldPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShortName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SportRadarPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SportsDirectPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StatsPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Team)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingDraftKingsSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingFanDuelSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingGameOpponent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingGameWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingOpponentPositionRank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingOpponentRank)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpcomingYahooSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsaTodayHeadshotNoBackgroundUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsaTodayHeadshotNoBackgroundUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsaTodayHeadshotUpdated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsaTodayHeadshotUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsaTodayPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.XmlTeamPlayerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YahooName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YahooPlayerID)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AverageDraftPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.College)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentTeam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeclaredInactive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepthDisplayOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepthOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepthPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepthPositionCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DraftKingsName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DraftKingsPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Experience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExperienceString)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FanDuelName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FanDuelPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FantasyAlarmPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FantasyDraftName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FantasyDraftPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FantasyPosition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FantasyPositionDepthOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GlobalTeamID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeightFeet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeightInches)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjuryBodyPart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjuryNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjuryPractice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjuryPracticeDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjuryStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InjuryStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsUndraftedFreeAgent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RotoWirePlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RotoworldPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShortName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SportRadarPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SportsDirectPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StatsPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Team)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingDraftKingsSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingFanDuelSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingGameOpponent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingGameWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingOpponentPositionRank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingOpponentRank)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpcomingYahooSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsaTodayHeadshotNoBackgroundUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsaTodayHeadshotNoBackgroundUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsaTodayHeadshotUpdated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsaTodayHeadshotUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsaTodayPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.XmlTeamPlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YahooName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YahooPlayerID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PlayerID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PlayerID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PlayerID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
